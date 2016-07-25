@@ -21,3 +21,7 @@ test:
 production:
   <<: *default
   database: randi_tamura_production
+  adapter: postgresql
+  host: localhost
+  username: user
+  database: app-dev
