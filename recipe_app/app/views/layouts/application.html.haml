@@ -8,15 +8,18 @@
 
 	
 %body
-	%nav.navbar.navbar-default.navbar-static-top
+	%nav.navbar.navbar-default
 		.container-fluid
-			.navbar-brand		
-				%button.navbar-toggle(type="button" data-toggle="collapse" data-target=".navbar-responsive-collapse")
+			.navbar-header		
+				%button.navbar-toggle{ type: :button, 'data-toggle' => :collapse, 'data-target' => "#bs-example-navbar-collapse-1" }
 					%span.sr-only Toggle navigation
 					%span.icon-bar
 					%span.icon-bar
 					%span.icon-bar
-				%navbar= link_to "Recipe App", root_path
+				= link_to "Recipe App", root_path
+				
+				.collapse.navbar-collapse#bs-example-navbar-collapse-1
+					%ul.nav.navbar-nav.navbar-right
 					
 				- if user_signed_in?	
 					%ul
